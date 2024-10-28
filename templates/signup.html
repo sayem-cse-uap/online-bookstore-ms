@@ -6,25 +6,30 @@
   <title>GreenBook bookstore</title>
 </head>
 <body>
-  <h1>This is login page</h1>
+  <h1>This is signup page</h1>
+  
   <form method="POST">
     {% csrf_token %}
 
-    {{ loginform.as_p }}
+    {{ signupform.as_p }}
 
-    <button type="submit"> Log In </button>
-
+    <button type="submit"> Sign Up</button>
   </form>
-  <p>Dont already have an account ? <a href="{% url 'signup' %}">Sign Up</a> </p>
+
+  <p>Already have an account ? <a href="{% url 'login' %}">Log In</a> </p>
 </body>
 </html>
 
 
-<!-- <h2>Login</h2>
+
+
+
+
+<!-- <h2>Sign Up</h2>
 <form method="">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit"> Login </button>
+  <button type="submit"> Sign Up </button>
 </form>
 
-<p>Dont already have an account ? <a href="{% url 'signup' %}"> Sign Up </a></p> -->
+<p>Already have an account ? <a href="{% url 'login' %}"> Log In </a></p> -->
