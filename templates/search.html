@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>This is Search page</h1>
+
+  {% if searchInput %}
+    <h2>You searched {{searchInput}}</h2>
+    <br>
+
+    {% for book in books %}
+      {{book}}
+      <br>
+    {% endfor %}
+  {% else %}
+  <h2> You forgot to search something ?</h2>
+  {% endif %}
+
+{% endblock %}
