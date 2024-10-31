@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 from . forms import CreateUserForm, LoginForm
 
+from django.contrib.auth.models import User
 # Create your views here.
 
 def home(request):
@@ -61,8 +62,9 @@ def logout(request):
   return redirect('home')
 
 @login_required(login_url = 'login')
-def profile(request):
-  return  render(request, 'profile.html')
+def profile(request, pk):
+  user = User.objects.get(id=pk)
+  return  render(request, 'profile.html', {'user':user})
 
 
 # def signup(request):
