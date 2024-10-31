@@ -8,7 +8,7 @@
     <br>
 
     {% for book in books %}
-      {{book}}
+      <a href="{% url 'book_details' book.id %}">{{book}}</a>
       <br>
     {% endfor %}
   {% else %}

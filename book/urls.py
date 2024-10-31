@@ -5,6 +5,7 @@ from . import views
 
 urlpatterns = [
   path('search/', views.search, name='search'),
+  path('book-details/<int:pk>', views.book_details, name='book_details'),
 ]
 
 
