@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenBook bookstore</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
   <h1>This is login page</h1>
   <form method="POST">
     {% csrf_token %}
@@ -16,8 +11,7 @@
 
   </form>
   <p>Dont already have an account ? <a href="{% url 'signup' %}">Sign Up</a> </p>
-</body>
-</html>
+{% endblock %}
 
 
 <!-- <h2>Login</h2>
